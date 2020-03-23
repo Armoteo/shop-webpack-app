@@ -1,4 +1,6 @@
 // toggleMenuIcon
+import {server, request, listCategories} from './Helper';
+
 let menuIcon = document.querySelector('i');
 let menuItems = document.querySelector('.nav-bar');
 let menuIconClass = document.querySelector('.menu-icon');
@@ -25,17 +27,28 @@ menuIcon.addEventListener('click', (e) => {
 });
 
 
+
+//create tabs
+// server(request);
+const containerTab = document.querySelector('.tab-container');
+
+for (let i = 0; i < listCategories.length; i++){
+   let tab = document.createElement('div');
+    tab.innerHTML = listCategories[i].name;
+    if(i === 0 ){
+        tab.className = 'tab active';
+    }else{
+        tab.className = 'tab';
+    }
+    containerTab.append(tab);
+};
+
+
 //toggle tabs and drop list
 let tabs = document.querySelectorAll('.tab');
 let contentTab = document.querySelectorAll('.list-container ul');
-let containerTab = document.querySelector('.tab-container');
-let catalogButton = document.querySelector('.catalog');
 
-let tabDrop = document.querySelectorAll('.tab-drop');
-let dropListInput = document.querySelector('.drop-list-input');
-
-
-//click tabs and toggle tab content
+// click tabs and toggle tab content
 containerTab.addEventListener('click', (event) => {
     event.preventDefault();
     let target = event.target;
@@ -50,21 +63,25 @@ containerTab.addEventListener('click', (event) => {
     }
 });
 
+
 //change value drop-list (spinner)
-dropListInput.addEventListener('change', (event) => {
-    event.preventDefault();
-    let target = event.target.value;
-    for(let i =0; i<tabDrop.length; i++){
-        if(target === tabDrop[i].value){
-            contentTab[i].className = '';
-        }else{
-            contentTab[i].className = 'hide-list';
-        }
-    }
-});
+// let tabDrop = document.querySelectorAll('.tab-drop');
+// let dropListInput = document.querySelector('.drop-list-input');
+// dropListInput.addEventListener('change', (event) => {
+//     event.preventDefault();
+//     let target = event.target.value;
+//     for(let i =0; i<tabDrop.length; i++){
+//         if(target === tabDrop[i].value){
+//             contentTab[i].className = '';
+//         }else{
+//             contentTab[i].className = 'hide-list';
+//         }
+//     }
+// });
 
 
 //download catalog
+let catalogButton = document.querySelector('.catalog');
 catalogButton.addEventListener('click', (e) => {
     console.log(e.target);
 });
@@ -83,4 +100,5 @@ searchForm.addEventListener('submit', (e) => {
     }
 
 });
+
 
