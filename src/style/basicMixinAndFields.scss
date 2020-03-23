@@ -1,0 +1,23 @@
+$link-color: #428bca;
+$width-wrapper: 1000px;
+$width-wrapper_780: 780px;
+$width-wrapper_480: 480px;
+$width-wrapper_350: 350px;
+$width-max_1: 360px;
+$width-max_2: 625px;
+$width-max_3: 780px;
+$width-max_4: 1025px;
+
+@mixin displayFlex(){
+    display: flex;
+    align-content: center;
+  }
+  
+.close {
+    display: none;
+  }
+  
+.visible {
+    display: flex;
+  }
+
