@@ -29,7 +29,7 @@ menuIcon.addEventListener('click', (e) => {
 //create tabs
 let containerTab = document.querySelector('.tab-container');
 createTabs();
-createDropList(clickOptionDropList);
+createDropList();
 createListCategories();
 let tabs = document.querySelectorAll('.tab');
 
@@ -71,7 +71,7 @@ CategoriesProduct.forEach((item)=>{
 };
 
 // change value drop-list (spinner)
-function createDropList(callback){
+function createDropList(){
     let dropListInput = document.querySelector('.drop-list-input');
     listCategories.forEach((item, index)=>{
         let itemDrop = document.createElement('option');
@@ -80,17 +80,14 @@ function createDropList(callback){
         itemDrop.id = index;
         dropListInput.append(itemDrop);
     });
-    return callback(dropListInput);
+    clickOptionDropList (dropListInput);
 };
 
 function clickOptionDropList (dropListInput){
     dropListInput.addEventListener('change', (event)=>{
-        event.preventDefault();
-      let index = listCategories.filter(el => {
-        let name = el.name.toLowerCase();
-        return name.indexOf(event.target.value.toLowerCase()) !== -1;
-      });
-      createListCategories(index[0].id)
+    event.preventDefault();
+    const index =  listCategories.find (item => item.name === event.target.value);
+    createListCategories(index.id);
     });
 }
 
