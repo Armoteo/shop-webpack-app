@@ -1,11 +1,11 @@
 // toggleMenuIcon
-import {server, request, listCategories} from './Helper';
+import {listCategories} from './Helper';
 
 let menuIcon = document.querySelector('i');
 let menuItems = document.querySelector('.nav-bar');
 let menuIconClass = document.querySelector('.menu-icon');
 
-// toggleMenu
+// toggleMenu (gamburger)
 menuIcon.addEventListener('click', (e) => {
     e.preventDefault();
     if (menuIcon.className === 'fas fa-bars') {
@@ -26,59 +26,73 @@ menuIcon.addEventListener('click', (e) => {
     }
 });
 
-
-
 //create tabs
-// server(request);
-const containerTab = document.querySelector('.tab-container');
+let containerTab = document.querySelector('.tab-container');
+createTabs();
+createDropList(clickOptionDropList);
+createListCategories();
+let tabs = document.querySelectorAll('.tab');
 
-for (let i = 0; i < listCategories.length; i++){
-   let tab = document.createElement('div');
-    tab.innerHTML = listCategories[i].name;
-    if(i === 0 ){
-        tab.className = 'tab active';
-    }else{
-        tab.className = 'tab';
-    }
-    containerTab.append(tab);
+function createTabs(){
+        listCategories.forEach((item)=>{
+            let tab = document.createElement('div');
+            tab.innerHTML = item.name;
+            tab.addEventListener('click', (event)=>{
+               event.preventDefault(); 
+
+               tabs.forEach((elem, index)=>{
+                event.target === elem? (elem.className = 'tab active', createListCategories(index)) : elem.className = 'tab';
+               });
+            });
+            item.id === 0 ? tab.className = 'tab active': tab.className = 'tab';
+            containerTab.append(tab);
+        });
+    };
+
+//create listProductCategoies
+function createListCategories(id = 0){
+let listItem = document.querySelectorAll('.listCategoriesProduct li');
+let listCategoriesProduct = document.querySelector('.listCategoriesProduct');
+const {CategoriesProduct} = listCategories[id];
+if(listItem){
+listItem.forEach((item)=>{
+    listCategoriesProduct.removeChild(item);
+});
+}
+CategoriesProduct.forEach((item)=>{
+    let listItem = document.createElement('li');
+    listItem.innerHTML = item.name;
+    listItem.addEventListener('click', (event)=>{
+                event.preventDefault();
+                console.log(event.target)
+            })
+            listCategoriesProduct.append(listItem); 
+});
 };
 
+// change value drop-list (spinner)
+function createDropList(callback){
+    let dropListInput = document.querySelector('.drop-list-input');
+    listCategories.forEach((item, index)=>{
+        let itemDrop = document.createElement('option');
+        itemDrop.innerHTML = item.name;
+        itemDrop.className = 'tab-drop';
+        itemDrop.id = index;
+        dropListInput.append(itemDrop);
+    });
+    return callback(dropListInput);
+};
 
-//toggle tabs and drop list
-let tabs = document.querySelectorAll('.tab');
-let contentTab = document.querySelectorAll('.list-container ul');
-
-// click tabs and toggle tab content
-containerTab.addEventListener('click', (event) => {
-    event.preventDefault();
-    let target = event.target;
-    for (let i = 0; i < tabs.length; i++) {
-        if (target === tabs[i]) {
-            tabs[i].className = 'tab active';
-            contentTab[i].className = '';
-        } else {
-            tabs[i].className = 'tab';
-            contentTab[i].className = 'hide-list';
-        }
-    }
-});
-
-
-//change value drop-list (spinner)
-// let tabDrop = document.querySelectorAll('.tab-drop');
-// let dropListInput = document.querySelector('.drop-list-input');
-// dropListInput.addEventListener('change', (event) => {
-//     event.preventDefault();
-//     let target = event.target.value;
-//     for(let i =0; i<tabDrop.length; i++){
-//         if(target === tabDrop[i].value){
-//             contentTab[i].className = '';
-//         }else{
-//             contentTab[i].className = 'hide-list';
-//         }
-//     }
-// });
-
+function clickOptionDropList (dropListInput){
+    dropListInput.addEventListener('change', (event)=>{
+        event.preventDefault();
+      let index = listCategories.filter(el => {
+        let name = el.name.toLowerCase();
+        return name.indexOf(event.target.value.toLowerCase()) !== -1;
+      });
+      createListCategories(index[0].id)
+    });
+}
 
 //download catalog
 let catalogButton = document.querySelector('.catalog');
@@ -89,7 +103,6 @@ catalogButton.addEventListener('click', (e) => {
 //search form - post on server for request search
 let searchForm = document.querySelector('.search-header'),
     inputSearch = document.querySelector('.search-header input');
-
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (inputSearch.value !== '') {
