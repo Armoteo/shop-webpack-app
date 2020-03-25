@@ -79,22 +79,23 @@
     ]
 
 export const dataImgSlider = [
-    {"name" : "Girl",
-    "urlPath" : "../../assets/images/girl.jpg"},
-    {"name" : "jackets",
-    "urlPath" : "../../assets/images/jackets.jpg"
+    {"title" : "Girl",
+    "img" : "../../src/assets/images/girl.jpg"
+    },
+    {"title" : "jackets",
+    "img" : "../../src/assets/images/jackets.jpg"
     },
     {
-    "name" : "Shirts",
-    "urlPath" : "../../assets/images/shirts.jpg"
+    "title" : "Shirts",
+    "img" : "../../src/assets/images/shirts.jpg"
     },
     {
-    "name" : "Smile",
-    "urlPath" : "../../assets/images/smile.jpg"
+    "title" : "Smile",
+    "img" : "../../src/assets/images/smile.jpg"
     },
     {
-    "name" : "Sweatshirts",
-    "urlPath" : "../../assets/images/sweatshirts.jpg"
+    "title" : "Sweatshirts",
+    "img" : "../../src/assets/images/sweatshirts.jpg"
     }
 ]
    
