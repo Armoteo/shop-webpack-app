@@ -1,0 +1,23 @@
+@import "../../style/basicMixinAndFields.scss";
+
+.main-container{
+width: 100%;
+@include displayFlex();
+}
+
+.main-nav{
+  border: 1px solid red;
+  width: 25%;
+}
+
+.main-content{
+  border: 1px solid red;
+  width: 75%;
+}
+.slider-content{
+
+}
+
+.content-product{
+
+}

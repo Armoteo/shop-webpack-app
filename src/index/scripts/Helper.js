@@ -77,5 +77,25 @@
         ]
     }
     ]
+
+export const dataImgSlider = [
+    {"name" : "Girl",
+    "urlPath" : "../../assets/images/girl.jpg"},
+    {"name" : "jackets",
+    "urlPath" : "../../assets/images/jackets.jpg"
+    },
+    {
+    "name" : "Shirts",
+    "urlPath" : "../../assets/images/shirts.jpg"
+    },
+    {
+    "name" : "Smile",
+    "urlPath" : "../../assets/images/smile.jpg"
+    },
+    {
+    "name" : "Sweatshirts",
+    "urlPath" : "../../assets/images/sweatshirts.jpg"
+    }
+]
    
     
