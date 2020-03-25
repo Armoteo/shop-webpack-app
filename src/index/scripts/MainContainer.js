@@ -1,6 +1,8 @@
-import {dataImgSlider} from './Helper';
+// @ts-nocheck
+import {dataImgSlider, hitsProduct} from './Helper';
 
 let data = '',
+    product = '',
       count = 0;
 
 
@@ -92,4 +94,14 @@ function response() {
 };
 
 response();
+
+class ProductModel {
+    constructor(product){
+        this.product = product;
+    }
+
+createProduct = () => {
+
+}
+};
 
