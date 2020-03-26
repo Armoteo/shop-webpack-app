@@ -9,6 +9,12 @@ width: 100%;
   border: 1px solid red;
   width: 25%;
 }
+.card-product{
+  @include displayFlex();
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 .main-content{
   width: 75%;
