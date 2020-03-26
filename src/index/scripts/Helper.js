@@ -181,13 +181,7 @@ export const newProductPrice = [
                         "name": "Asus ZenBoock",
                         "price": 12000,
                         "imSrc": "../../src/assets/images/asus_zen.jpg"
-                        },
-                        {
-                            "id": 9,
-                            "name": "Dell Ultra 182",
-                            "price": 9800,
-                            "imSrc": "../../src/assets/images/dell_ultra.png"
-                            },
+                        }
 ]
    
     

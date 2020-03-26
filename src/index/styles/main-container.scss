@@ -15,7 +15,7 @@ width: 100%;
 
 .card-product{
   @include displayFlex();
-  // width: 90%;
+  width: 220px;
   height: 115px;
   flex-direction: column;
   justify-content: center;
@@ -138,14 +138,16 @@ width: 100%;
   padding-left: 5px;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  h2{
+    padding-left: 20px;
+  }
 }
 
 .content-product{
   width: 100%;
  display: flex;
- justify-content: space-between;
+ justify-content: space-evenly;
  flex-wrap: wrap;
- border: 1px solid red;
 }
 
 @-webkit-keyframes fade {
