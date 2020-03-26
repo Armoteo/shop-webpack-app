@@ -12,15 +12,15 @@
     }
 
     export const listCategories = [
-        {"id":0,"name":"Компьютеры и ноутбуки",
+        {"id":0,"name":"Женские одежда",
          "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "Компьютеры",
+            "name" : "Платья",
             },
             {
                 "id": 1,
-                "name" : "Планшеты",
+                "name" : "Свитеры",
             },
             {
                 "id": 2,
@@ -28,15 +28,15 @@
             }
         ]
     },
-        {"id":1,"name":"Смартфоны и аксессуары",
+        {"id":1,"name":"Женская обувь",
         "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "Смартфоны",
+            "name" : "Туфли",
             },
             {
                 "id": 1,
-                "name" : "Чехлы и стекла",
+                "name" : "Сапоги",
             },
             {
                 "id": 2,
@@ -44,15 +44,15 @@
             }
         ]
     },
-        {"id":2,"name":"Бытовая техника",
+        {"id":2,"name":"Все для мейкапа",
         "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "Кухонная техника",
+            "name" : "Кисточки",
             },
             {
                 "id": 1,
-                "name" : "Бытовая техника",
+                "name" : "Косметика",
             },
             {
                 "id": 2,
@@ -102,27 +102,21 @@ export const dataImgSlider = [
 export const hitsProduct = [
     {
     "id": 0,
-    "name": "Asus ZenBoock",
-    "price": 12000,
-    "imSrc": "../../src/assets/images/asus_zen.jpg"
+    "name": "Azur life",
+    "price": 600,
+    "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
     },
     {
         "id": 1,
-        "name": "Dell Ultra 182",
-        "price": 9800,
-        "imSrc": "../../src/assets/images/dell_ultra.png"
+        "name": "Kare Love",
+        "price": 1180,
+        "imSrc": "../../src/assets/images/kare11.jpg"
         },
     {
         "id": 2,
-        "name": "HP Pavilion",
-        "price": 11800,
-        "imSrc": "../../src/assets/images/hp_pavilion.png"
-        },
-    {
-        "id": 3,
-        "name": "Lenovo L340",
-        "price": 19900,
-        "imSrc": "../../src/assets/images/lenovo_thinkbook.jpg"
+        "name": "Livo",
+        "price": 1900,
+        "imSrc": "../../src/assets/images/red-dress.jpg"
         },
 
 ]
@@ -130,58 +124,81 @@ export const hitsProduct = [
 export const newProductPrice = [
     {
         "id": 0,
-        "name": "Asus ZenBoock",
-        "price": 12000,
-        "imSrc": "../../src/assets/images/asus_zen.jpg"
+    "name": "Azur life",
+    "price": 600,
+    "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
         },
-        {
-            "id": 1,
-            "name": "Dell Ultra 182",
-            "price": 9800,
-            "imSrc": "../../src/assets/images/dell_ultra.png"
-            },
+    
         {
             "id": 2,
-            "name": "HP Pavilion",
-            "price": 11800,
-            "imSrc": "../../src/assets/images/hp_pavilion.png"
+            "name": "Kare Love",
+            "price": 1180,
+            "imSrc": "../../src/assets/images/kare11.jpg"
             },
         {
             "id": 3,
-            "name": "Lenovo L340",
-            "price": 19900,
-            "imSrc": "../../src/assets/images/lenovo_thinkbook.jpg"
+            "name": "Livo",
+            "price": 1900,
+            "imSrc": "../../src/assets/images/red-dress.jpg"
             },
             {
                 "id": 4,
-                "name": "Asus ZenBoock",
-                "price": 12000,
-                "imSrc": "../../src/assets/images/asus_zen.jpg"
+            "name": "Azur life",
+            "price": 600,
+            "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
                 },
-                {
-                    "id": 5,
-                    "name": "Dell Ultra 182",
-                    "price": 9800,
-                    "imSrc": "../../src/assets/images/dell_ultra.png"
-                    },
+               
                 {
                     "id": 6,
-                    "name": "HP Pavilion",
-                    "price": 11800,
-                    "imSrc": "../../src/assets/images/hp_pavilion.png"
+                    "name": "Kare Love",
+                    "price": 1180,
+                    "imSrc": "../../src/assets/images/kare11.jpg"
                     },
                 {
                     "id": 7,
-                    "name": "Lenovo L340",
-                    "price": 19900,
-                    "imSrc": "../../src/assets/images/lenovo_thinkbook.jpg"
+                    "name": "Livo",
+                    "price": 1900,
+                    "imSrc": "../../src/assets/images/red-dress.jpg"
                     },
                     {
                         "id": 8,
-                        "name": "Asus ZenBoock",
-                        "price": 12000,
-                        "imSrc": "../../src/assets/images/asus_zen.jpg"
-                        }
+                    "name": "Azur life",
+                    "price": 600,
+                    "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
+                        },
+                       
+                        {
+                            "id": 10,
+                            "name": "Kare Love",
+                            "price": 1180,
+                            "imSrc": "../../src/assets/images/kare11.jpg"
+                            },
+                        {
+                            "id": 11,
+                            "name": "Livo",
+                            "price": 1900,
+                            "imSrc": "../../src/assets/images/red-dress.jpg"
+                            },
+                            {
+                                "id": 12,
+                            "name": "Azur life",
+                            "price": 600,
+                            "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
+                                },
+                               
+                                {
+                                    "id": 13,
+                                    "name": "Kare Love",
+                                    "price": 1180,
+                                    "imSrc": "../../src/assets/images/kare11.jpg"
+                                    },
+                                {
+                                    "id": 14,
+                                    "name": "Livo",
+                                    "price": 1900,
+                                    "imSrc": "../../src/assets/images/red-dress.jpg"
+                                    },
+
 ]
    
     

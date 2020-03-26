@@ -1,0 +1,136 @@
+.footer{
+width: 100%;
+margin-top: 25px;
+}
+
+.line-info{
+width: 100%;
+height: 80px;
+background-image: url("../../assets/img/footer_info.png");
+background-size: cover;
+position: relative;
+div{
+width: 30%;
+height: 95%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 5px;
+border-radius: 0 0 70% 70% / 0 0 140% 140%;
+overflow: hidden;
+box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+background-color: #8d8d8d;
+color: #737373;
+font-weight: bold;
+position: absolute;
+left: 15%;
+z-index: 999;
+   span{
+       &:first-child{
+        font-size: 1.1em;
+       }
+       &:last-child{
+        font-size: 2em; 
+       }
+   }
+}
+}
+
+
+.footer-content{
+    width: 100%;
+    height: 280px;
+    background-image: url("../../assets/img/fon_footer.png");
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+   align-items:center;
+
+    
+h1{
+    text-align: center;
+    font-family: barbie;
+}
+}
+
+.footer-button{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    align-items: center;
+    button{
+        width: 45px;
+        height: 45px;
+        background-color: transparent;
+        border: 2px solid #515151;
+        border-radius:5px;
+        font-size: 20px;
+        outline: 0;
+        &:hover{
+        cursor: pointer;
+        border: 2px solid #de2b24;
+        }
+    }
+}
+
+.form-subscribe{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    .footer-input{
+        width: 420px;
+        height: 45px;
+        background-color: #757272;
+        font-size: 20px;
+        border: transparent;
+        padding-left: 15px;
+        border-radius:5px;
+        
+    }
+    button{
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #515151;
+    border-radius:5px;
+    font-size: 20px;
+    outline: 0;
+    &:hover{
+    cursor: pointer;
+    border: 2px solid #de2b24;
+    }
+    }
+}
+
+.line-footer{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.end-footer{
+height: 12%;
+display: flex;
+align-items:center;
+span{
+font-family: barbie, cursive;
+font-size: 1.1em;
+}
+}
+
+/*Цвет плейсхолдера*/
+::-webkit-input-placeholder { /* Edge */
+    color: #bbbbbb;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #bbbbbb;
+}
+
+::placeholder {
+    color: #bbbbbb;
+}
