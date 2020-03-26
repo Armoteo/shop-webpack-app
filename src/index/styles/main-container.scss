@@ -6,24 +6,49 @@ width: 100%;
 }
 
 .main-hits{
-  border: 1px solid red;
+  @include displayFlex();
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 3px 3px 3px;
   width: 25%;
 }
+
 .card-product{
   @include displayFlex();
-  width: 100%;
+  // width: 90%;
+  height: 115px;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid rgb(148, 144, 144);
+  align-items: center;
+  margin-top: 10px;
+  img{
+    width: 70%;
+    height: 90px;
+    border-radius: 5px;
+  }
+  span{
+  color: red;
+  font-family: Roboto-Regular;
+  padding-bottom: 1px;
+  }
+  &:hover{
+    cursor: pointer;
+    border-color: rgb(233, 75, 75);
+  }
 }
 
 .main-content{
   width: 75%;
   @include displayFlex();
+  flex-direction: column;
+  align-items:center;
 }
 .slider{
   position: relative;
   padding: 2px;
-  margin-top: 5px;
+  margin-top: 2px;
   
   .item-slider{
     -webkit-animation-name: fade;
@@ -61,12 +86,67 @@ width: 100%;
   }
 }
 
-
-
-.content-product{
-
+.sale-div{
+  @include displayFlex();
+  position: relative;
+  width: 100%;
+  margin-top:20px;
+  color: #fff;
+  font-weight: bold;
+  font-family: barbie;
+  div{
+    &:first-child{
+      width: 100%;
+      height: 35px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items:center;
+      background-image: url("../../assets/img/fon-sale.png");
+      background-size: cover;
+      font-size: 1.2em;
+      span{
+        &:last-child{
+          &:hover{
+            color: rgb(196, 196, 196);
+          }
+        }
+      }
+    }
+    &:last-child{
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left:45%;
+      top:-50%;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      border-radius: 50%;
+      background-image: url("../../assets/img/sale-info.png");
+      font-size: 1.5em;
+    }
+  }
+}
+.container-product{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
 }
 
+.title-new{
+  padding-left: 5px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content-product{
+  width: 100%;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ border: 1px solid red;
+}
 
 @-webkit-keyframes fade {
   from {

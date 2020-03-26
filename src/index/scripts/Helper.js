@@ -122,9 +122,72 @@ export const hitsProduct = [
         "id": 3,
         "name": "Lenovo L340",
         "price": 19900,
-        "imSrc": "../../src/assets/images/lenovo_thinkboock.jpg"
+        "imSrc": "../../src/assets/images/lenovo_thinkbook.jpg"
         },
 
+]
+
+export const newProductPrice = [
+    {
+        "id": 0,
+        "name": "Asus ZenBoock",
+        "price": 12000,
+        "imSrc": "../../src/assets/images/asus_zen.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Dell Ultra 182",
+            "price": 9800,
+            "imSrc": "../../src/assets/images/dell_ultra.png"
+            },
+        {
+            "id": 2,
+            "name": "HP Pavilion",
+            "price": 11800,
+            "imSrc": "../../src/assets/images/hp_pavilion.png"
+            },
+        {
+            "id": 3,
+            "name": "Lenovo L340",
+            "price": 19900,
+            "imSrc": "../../src/assets/images/lenovo_thinkbook.jpg"
+            },
+            {
+                "id": 4,
+                "name": "Asus ZenBoock",
+                "price": 12000,
+                "imSrc": "../../src/assets/images/asus_zen.jpg"
+                },
+                {
+                    "id": 5,
+                    "name": "Dell Ultra 182",
+                    "price": 9800,
+                    "imSrc": "../../src/assets/images/dell_ultra.png"
+                    },
+                {
+                    "id": 6,
+                    "name": "HP Pavilion",
+                    "price": 11800,
+                    "imSrc": "../../src/assets/images/hp_pavilion.png"
+                    },
+                {
+                    "id": 7,
+                    "name": "Lenovo L340",
+                    "price": 19900,
+                    "imSrc": "../../src/assets/images/lenovo_thinkbook.jpg"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Asus ZenBoock",
+                        "price": 12000,
+                        "imSrc": "../../src/assets/images/asus_zen.jpg"
+                        },
+                        {
+                            "id": 9,
+                            "name": "Dell Ultra 182",
+                            "price": 9800,
+                            "imSrc": "../../src/assets/images/dell_ultra.png"
+                            },
 ]
    
     
