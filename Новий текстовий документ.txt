@@ -3,76 +3,76 @@
     let response = {
         status: 200,
         readyState: 4,
+    } 
+    setTimeout(callback(response), 5000); 
     }
-    setTimeout(callback(response), 5000);
-    }
-
+    
     export const request = function request(response){
         console.log(response.status);
     }
 
     export const listCategories = [
-        {"id":0,"name":"Р–РµРЅСЃРєРёРµ РѕРґРµР¶РґР°",
+        {"id":0,"name":"Женские одежда",
          "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "РџР»Р°С‚СЊСЏ",
+            "name" : "Платья",
             },
             {
                 "id": 1,
-                "name" : "РЎРІРёС‚РµСЂС‹",
+                "name" : "Свитеры",
             },
             {
                 "id": 2,
-                "name" : "РђРєСЃРµСЃСЃСѓР°СЂС‹",
+                "name" : "Аксессуары",
             }
         ]
     },
-        {"id":1,"name":"Р–РµРЅСЃРєР°СЏ РѕР±СѓРІСЊ",
+        {"id":1,"name":"Женская обувь",
         "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "РўСѓС„Р»Рё",
+            "name" : "Туфли",
             },
             {
                 "id": 1,
-                "name" : "РЎР°РїРѕРіРё",
+                "name" : "Сапоги",
             },
             {
                 "id": 2,
-                "name" : "РђРєСЃРµСЃСЃСѓР°СЂС‹",
+                "name" : "Аксессуары",
             }
         ]
     },
-        {"id":2,"name":"Р’СЃРµ РґР»СЏ РјРµР№РєР°РїР°",
+        {"id":2,"name":"Все для мейкапа",
         "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "РљРёСЃС‚РѕС‡РєРё",
+            "name" : "Кисточки",
             },
             {
                 "id": 1,
-                "name" : "РљРѕСЃРјРµС‚РёРєР°",
+                "name" : "Косметика",
             },
             {
                 "id": 2,
-                "name" : "РђРєСЃРµСЃСЃСѓР°СЂС‹",
+                "name" : "Аксессуары",
             }
         ]
     },
-        {"id":3,"name":"РўРѕРІР°СЂС‹ РґР»СЏ РґРѕРјР°",
+        {"id":3,"name":"Товары для дома",
         "CategoriesProduct": [
             {
             "id": 0,
-            "name" : "РћРґРµСЏР»Р°",
+            "name" : "Одеяла",
             },
             {
             "id": 1,
-            "name" : "Р›Р°РјРїС‹",
+            "name" : "Лампы",
             },
             {
             "id": 2,
-            "name" : "РЎРµСЂРІРёР·С‹",
+            "name" : "Сервизы",
             }
         ]
     }
@@ -128,7 +128,7 @@ export const newProductPrice = [
     "price": 600,
     "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
         },
-
+    
         {
             "id": 2,
             "name": "Kare Love",
@@ -147,7 +147,7 @@ export const newProductPrice = [
             "price": 600,
             "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
                 },
-
+               
                 {
                     "id": 6,
                     "name": "Kare Love",
@@ -166,7 +166,7 @@ export const newProductPrice = [
                     "price": 600,
                     "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
                         },
-
+                       
                         {
                             "id": 10,
                             "name": "Kare Love",
@@ -185,7 +185,7 @@ export const newProductPrice = [
                             "price": 600,
                             "imSrc": "../../src/assets/images/chernoe-shifonovoe.jpg"
                                 },
-
+                               
                                 {
                                     "id": 13,
                                     "name": "Kare Love",
@@ -200,5 +200,5 @@ export const newProductPrice = [
                                     },
 
 ]
-
+   
     
