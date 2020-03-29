@@ -54,6 +54,13 @@ function toggleSlide(){
         index === count ? element.className = 'slider-dots_item dotActive' : element.className = 'slider-dots_item';
     });
 };
+// const utoListSlider = setInterval(()=>{
+//     togleCount();
+// }, 8000);
+
+// function clearSlider(){
+//     clearTimeout(utoListSlider);
+// }
 setInterval(()=>{
     togleCount();
 }, 8000);
@@ -88,6 +95,8 @@ function response() {
            data = dataImgSlider;
            let slider = new Slider(data, count);
            slider.createSlider();
+           window.onunload = function (){
+            
            
         };
    });
@@ -183,3 +192,5 @@ function responseNewProduct() {
 };
 
 responseNewProduct();
+
+

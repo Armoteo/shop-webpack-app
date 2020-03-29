@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "browserslist": "> 0.25%, not dead",
   "keywords": [
@@ -57,6 +57,7 @@
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "typescript": "^3.8.3"
   }
 }
