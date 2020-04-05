@@ -80,8 +80,8 @@ module.exports = {
    // у примеру нужно подключить чужую библиотеку 
     entry: {
     main:['@babel/polyfill','./main.js'],
-    index: ['@babel/polyfill','./index/scripts/index.js'],
-    secondPage: ['@babel/polyfill', './secondPage/secondPage.js']
+    index: ['./index/scripts/index.js'],
+    secondPage: ['./secondPage/secondPage.js']
    },
   //куда все будет сложено
    output: {

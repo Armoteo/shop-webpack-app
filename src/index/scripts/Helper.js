@@ -1,16 +1,5 @@
 //emulation server
- export const server =  function server (callback){
-    let response = {
-        status: 200,
-        readyState: 4,
-    }
-    setTimeout(callback(response), 5000);
-    }
-
-    export const request = function request(response){
-        console.log(response.status);
-    }
-
+ 
     export const listCategories = [
         {"id":0,"name":"Женские одежда",
          "CategoriesProduct": [

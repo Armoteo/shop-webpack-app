@@ -1,5 +1,5 @@
 // toggleMenuIcon
-import {listCategories} from './Helper';
+import { listCategories } from './Helper';
 
 let menuIcon = document.querySelector('i');
 let menuItems = document.querySelector('.nav-bar');
@@ -33,61 +33,61 @@ createDropList();
 createListCategories();
 let tabs = document.querySelectorAll('.tab');
 
-function createTabs(){
-        listCategories.forEach((item)=>{
-            let tab = document.createElement('div');
-            tab.innerHTML = item.name;
-            tab.addEventListener('click', (event)=>{
-               event.preventDefault(); 
+function createTabs() {
+    listCategories.forEach((item) => {
+        let tab = document.createElement('div');
+        tab.innerHTML = item.name;
+        tab.addEventListener('click', (event) => {
+            event.preventDefault();
 
-               tabs.forEach((elem, index)=>{
-                event.target === elem? (elem.className = 'tab active', createListCategories(index)) : elem.className = 'tab';
-               });
+            tabs.forEach((elem, index) => {
+                event.target === elem ? (elem.className = 'tab active', createListCategories(index)) : elem.className = 'tab';
             });
-            item.id === 0 ? tab.className = 'tab active': tab.className = 'tab';
-            containerTab.append(tab);
         });
-    };
+        item.id === 0 ? tab.className = 'tab active' : tab.className = 'tab';
+        containerTab.append(tab);
+    });
+}
 
 //create listProductCategoies
-function createListCategories(id = 0){
-let listItem = document.querySelectorAll('.listCategoriesProduct li');
-let listCategoriesProduct = document.querySelector('.listCategoriesProduct');
-const {CategoriesProduct} = listCategories[id];
-if(listItem){
-listItem.forEach((item)=>{
-    listCategoriesProduct.removeChild(item);
-});
+function createListCategories(id = 0) {
+    let listItem = document.querySelectorAll('.listCategoriesProduct li');
+    let listCategoriesProduct = document.querySelector('.listCategoriesProduct');
+    const { CategoriesProduct } = listCategories[id];
+    if (listItem) {
+        listItem.forEach((item) => {
+            listCategoriesProduct.removeChild(item);
+        });
+    }
+    CategoriesProduct.forEach((item) => {
+        let listItem = document.createElement('li');
+        listItem.innerHTML = item.name;
+        listItem.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log(event.target);
+        });
+        listCategoriesProduct.append(listItem);
+    });
 }
-CategoriesProduct.forEach((item)=>{
-    let listItem = document.createElement('li');
-    listItem.innerHTML = item.name;
-    listItem.addEventListener('click', (event)=>{
-                event.preventDefault();
-                console.log(event.target)
-            })
-            listCategoriesProduct.append(listItem); 
-});
-};
 
 // change value drop-list (spinner)
-function createDropList(){
+function createDropList() {
     let dropListInput = document.querySelector('.drop-list-input');
-    listCategories.forEach((item, index)=>{
+    listCategories.forEach((item, index) => {
         let itemDrop = document.createElement('option');
         itemDrop.innerHTML = item.name;
         itemDrop.className = 'tab-drop';
         itemDrop.id = index;
         dropListInput.append(itemDrop);
     });
-    clickOptionDropList (dropListInput);
-};
+    clickOptionDropList(dropListInput);
+}
 
-function clickOptionDropList (dropListInput){
-    dropListInput.addEventListener('change', (event)=>{
-    event.preventDefault();
-    const index =  listCategories.find (item => item.name === event.target.value);
-    createListCategories(index.id);
+function clickOptionDropList(dropListInput) {
+    dropListInput.addEventListener('change', (event) => {
+        event.preventDefault();
+        const index = listCategories.find(item => item.name === event.target.value);
+        createListCategories(index.id);
     });
 }
 

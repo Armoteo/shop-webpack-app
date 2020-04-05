@@ -5,15 +5,15 @@ let faceButton = document.querySelector('#facebook'),
     googleButton = document.querySelector('#google'),
     linkedinButton = document.querySelector('#linkedin');
 
-    faceButton.addEventListener('click', function(event){
+    faceButton.addEventListener('click', function(){
         window.location = "https://www.facebook.com/";
     });
-    twitterButton.addEventListener('click', function(event){
+    twitterButton.addEventListener('click', function(){
         window.location = "https://twitter.com/?lang=uk";
     }); 
-    googleButton.addEventListener('click', function(event){
+    googleButton.addEventListener('click', function(){
         window.location = "https://aboutme.google.com/u/0/?referer=gplus";
     });
-    linkedinButton.addEventListener('click', function(event){
+    linkedinButton.addEventListener('click', function(){
         window.location = "https://www.linkedin.com/";
     });
