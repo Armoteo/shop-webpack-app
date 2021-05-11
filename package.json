@@ -58,7 +58,7 @@
     "@typescript-eslint/parser": "^2.26.0",
     "eslint-plugin-react": "^7.19.0",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
